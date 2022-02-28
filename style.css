@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Sriracha&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: grid;
+    grid-template-areas: 
+    "title"
+    "body"
+    "footer";
+    grid-template-rows: 180px 1fr 80px;
+    grid-template-columns: 100%;
+}
+
+/*ESTILIZAÇÃO DO HEADER*/
+header{
+    display: flex;
+    grid-area: title;
+    background-color: black;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Passion One', cursive;
+    
+}
+
+header h1{
+    font-size: 4rem;
+}
+header small{
+    font-size: 20px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+/*ESTILIZAÇÃO DO CORPO*/
+main{
+    font-family: 'Sriracha', cursive;
+    grid-area: body;
+    text-shadow: .1px .1px .1px black;
+}
+article{
+    padding: 30px;
+}
+
+article p{
+    width: 70%;
+    height: fit-content;
+    line-height: 3rem;
+}
+.estrofe{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+.estrofe p{
+    padding: 30px;
+}
+.estrofe__flor{
+    background: black url(imagens/background001.jpg) center right no-repeat fixed;
+    background-size: cover;
+    box-shadow: inset 2px 2px 1px rgba(0, 0, 0, 0.296);
+
+}
+.estrofe__folha{
+    background: black url(imagens/background002.jpg) center center no-repeat fixed;
+    background-size: cover;
+    box-shadow: inset 2px 2px 1px rgba(0, 0, 0, 0.296);
+
+}
+.estrofe__flor p, .estrofe__folha p{
+    background-color: rgba(0, 0, 0, 0.212);
+    color: white;
+    line-height: 3rem;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding: 30px;
+    
+}
+
+footer{
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    font-family: 'Sriracha', cursive;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 429px) {
+    header h1{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 323px) {
+    header h1{
+        font-size: 2.5rem;
+    }
+}
